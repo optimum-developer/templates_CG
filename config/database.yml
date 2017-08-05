@@ -1,0 +1,31 @@
+production:
+  host: 127.0.0.1
+  adapter: postgresql
+  encoding: utf8
+  database: res_production 
+  pool: 5
+  username: deploy
+  password: deploy
+  timeout: 5000
+
+
+development:
+  host: 127.0.0.1
+  adapter: postgresql
+  encoding: utf8
+  database: res_staging 
+  pool: 5
+  username: deploy
+  password: deploy
+  timeout: 5000
+
+
+test:
+  host: 127.0.0.1
+  adapter: postgresql
+  encoding: utf8
+  database: res_test 
+  pool: 5
+  username: deploy
+  password: deploy
+  timeout: 5000
