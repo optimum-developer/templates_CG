@@ -14,7 +14,7 @@ Rails.application.routes.draw do
   resources :templates do
     member do
       get "show_template", to: "templates#show_template"
-      
+      get ":page_name", to: "templates#show_page"
     end
   end
 

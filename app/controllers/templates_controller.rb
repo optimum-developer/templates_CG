@@ -1,5 +1,5 @@
 class TemplatesController < ApplicationController
-  before_action :set_template, only: [:show, :edit, :update, :destroy, :show_template]
+  before_action :set_template, only: [:show, :edit, :update, :destroy, :show_template, :show_page]
 
   # GET /templates
   # GET /templates.json
@@ -10,6 +10,11 @@ class TemplatesController < ApplicationController
   # GET /templates/1
   # GET /templates/1.json
   def show
+    render "/website_layouts/" + @template.template_id + "/index.html", :layout => false
+  end
+
+  def show_page
+    render "/website_layouts/" + @template.template_id + "/" + params["page_name"] + ".html", :layout => false
   end
 
   # GET /templates/new
@@ -61,8 +66,16 @@ class TemplatesController < ApplicationController
     end
   end
 
-  def show_template
-  end
+  # def show_template
+  #   # @template.template_id
+  #    # Dir.entries("#{Rails.root}/app/website_layouts").each do |file|
+  #    #  if file == "." || file == ".."
+  #    #      next
+  #    #  else
+  #    #    file.
+  #    #  end
+  #    render "#{Rails.root}/app/website_layouts/basic_90_index.html"
+  # end
 
   private
     # Use callbacks to share common setup or constraints between actions.
