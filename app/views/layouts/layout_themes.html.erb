@@ -1,0 +1,41 @@
+<html>
+<head>
+	<title></title>
+<script src="https://unpkg.com/vue"></script>
+<script src="/assets/jquery"></script>
+
+
+</head>
+<body>
+	<%if @open_or_edit=="edit"%>
+		<%used_template_elements=UsedTemplate.find(params["id"])%>
+	<%end%>
+	<%if @used_temp_id.present?%>
+		<input type="hidden" id="temp_name" value="<%=@used_temp_id%><%#=used_template_elements.id%>">
+	<%end%>
+	<%#set_theme_content_id_text=used_template_elements.template_elements.map{|a| [a.element_id,a.element_value]}%>
+	<%= yield %>
+	<%if @open_or_edit.present?%>
+		<%if @open_or_edit=="edit"%>
+			<script src="/assets/setting_v_html_vue"></script>
+		<%end%>
+	
+		<%if used_template_elements.template_elements.present?%>
+			<%used_template_elements.template_elements.each do |temp_elem|%>
+				
+				<script type="text/javascript">
+				render_id_text["<%=temp_elem.element_id%>"]="<%=temp_elem.element_value%>"
+				 </script>
+				
+			<%end%>
+		<%end%>
+	<%end%>
+
+</body>
+<%if @open_or_edit.present?%>
+	<%if @open_or_edit=="edit"%>
+		<script src="/assets/vue_fun"></script>
+	<%end%>
+<%end%>
+
+</html>

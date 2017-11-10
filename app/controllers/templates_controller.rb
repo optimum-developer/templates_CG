@@ -4,17 +4,26 @@ class TemplatesController < ApplicationController
   # GET /templates
   # GET /templates.json
   def index
-    @templates = Template.all
+    if  params.has_key?(:website_id)
+      @user_website_id=params["website_id"]
+    end
+      @templates = Template.all
   end
 
   # GET /templates/1
   # GET /templates/1.json
+
+  # def edit_temp
+    # render "/website_layouts/" + @template.template_name + "/index.html", :layout => "layout_themes"       
+    # @open_or_edit="open"
+  # end
   def show
-    render "/website_layouts/" + @template.template_id + "/index.html", :layout => false
+    # @open_or_edit="open"
+    render "/website_layouts/" + @template.template_name + "/index.html", :layout => "layout_themes"
   end
 
   def show_page
-    render "/website_layouts/" + @template.template_id + "/" + params["page_name"] + ".html", :layout => false
+    render "/website_layouts/" + @template.template_name + "/" + params["page_name"] + ".html", :layout => "layout_themes"
   end
 
   # GET /templates/new
@@ -23,8 +32,13 @@ class TemplatesController < ApplicationController
   end
 
   # GET /templates/1/edit
-  def edit
-  end
+  # def temp_edit
+  #   # debugger
+  #   @template=Template.find(params["id"])
+  #   @open_or_edit="edit"
+  #   temp_name=@template.template_name
+  #   render "/website_layouts/" + temp_name + "/index.html", :layout => "layout_themes"
+  # end
 
   # POST /templates
   # POST /templates.json
@@ -76,6 +90,21 @@ class TemplatesController < ApplicationController
   #    #  end
   #    render "#{Rails.root}/app/website_layouts/basic_90_index.html"
   # end
+
+  def edit_with_view
+    
+  end
+
+  def save_element_id_content
+    params["all_edited_texts"].each do |p|
+      content=params["all_edited_texts"][p][0]
+      id_content=params["all_edited_texts"][p][1].first(-3)
+      TemplateElement.create(:element_id=>id_content,:element_value=>content,:used_template_id=> params["temp_name"]
+        )
+
+    end
+   
+  end
 
   private
     # Use callbacks to share common setup or constraints between actions.

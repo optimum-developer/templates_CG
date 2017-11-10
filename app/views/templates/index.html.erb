@@ -1,3 +1,65 @@
-<td><%= link_to 'Show Template', @template %></td>
-<td><%= link_to 'Edit', edit_template_path(@template) %></td>
-<td><%= link_to 'Destroy', template, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+<link rel="stylesheet" href="/assets/template_style.css">
+<td><%#= link_to 'Show Template', @template %></td>
+<td><%#= link_to 'Edit', edit_template_path(@template) %></td>
+<td><%#= link_to 'Destroy', template, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+<%@templates.each do |template|%>
+
+	<div class="fh5co-cards">
+		<div class="col-lg-3 col-md-6 col-sm-6">
+			<a class="fh5co-card" href="templates/<%=template.id%>">
+				<img src="/assets/base_90/demo/TN.png" alt="Free HTML5 Bootstrap template" class="img-responsive">
+				<div class="fh5co-card-body">
+					<h3><%=template.template_name%></h3>
+					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste sunt porro delectus cum officia magnam.</p>
+				</div>
+			</a>
+			
+			<a href="<%=template_path(template.id)%>"><button type="button"  id="open_temp">open</button></a>
+
+			<%if current_user.websites.find_by(:id=>params["website"]).used_template.present? %>
+				
+				<%user_website=current_user.websites.find_by(:id=>params["website"]).used_template.template_id%>
+			
+			<%end%>
+
+			<%if user_website==template.id%>
+				<%used_template_id=UsedTemplate.find_by(template_id: template.id,website_id: params["website"],user_id: current_user.id).id%>
+				<h2>selected
+				<a href="<%=edit_used_template_path(used_template_id)%>"><button type="button" id="edit_temp">edit</button>
+				</h2></a>
+			
+
+			<%else%>
+				
+				<button type="button" href="" id="choose_temp" onclick="ajax_update_temp_id(<%=template.id%>)">choose this template</button>
+			
+			<%end%>
+
+
+		</div>
+	</div>
+<%end%>
+
+<script type="text/javascript">
+	function ajax_update_temp_id(temp_id) {
+		// alert("wewhgyfg")
+    	$.ajax({
+                type: "GET",
+                dataType: 'json',
+                url: '<%=update_template_id_websites_path%>',
+                data: {temp_id,webs_id:"<%=params['website']%>"},
+
+                success: function(data) {
+                 	location.reload();
+                                     
+                },
+                error: function(err){
+                }
+
+                })
+
+	}
+</script>
+
+
+		

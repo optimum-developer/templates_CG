@@ -1,10 +1,11 @@
-class Business < ApplicationRecord
-
+class Website < ApplicationRecord
 	belongs_to :user
 	# has_many :templates
+	# has_one :category
+	has_one :used_template
 
 	def name
-		case business_type.to_i
+		case category.to_i
 		when 1    
 		  "Blog Website" 
 		when 2  
@@ -13,4 +14,5 @@ class Business < ApplicationRecord
 		  "School"
 		end
 	end
+
 end

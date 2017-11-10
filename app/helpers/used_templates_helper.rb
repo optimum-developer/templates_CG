@@ -1,0 +1,2 @@
+module UsedTemplatesHelper
+end

@@ -3,16 +3,17 @@
 <html lang="en">
 
 <head>
+    <script src="https://unpkg.com/vue"></script>
 
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
-
     <title>DashBoard</title>
 
     <%#= stylesheet_link_tag    'application'%>
+    <%= javascript_include_tag 'jquery'%>
     <%= stylesheet_link_tag 'bootstrap.min' %>
     <%= stylesheet_link_tag 'sb-admin' %>
     <%= stylesheet_link_tag 'plugins/morris' %>
@@ -148,7 +149,7 @@
                         <a href="index.html"><i class="fa fa-fw fa-dashboard"></i> Dashboard</a>
                     </li>
                     <li class="active">
-                        <a href="<%=new_business_path%>"><i class="fa fa-fw fa-bar-chart-o"></i> Business</a>
+                        <a href="<%=new_website_path%>"><i class="fa fa-fw fa-bar-chart-o"></i> website</a>
                     </li>
                         <a href="javascript:;" data-toggle="collapse" data-target="#demo"><i class="fa fa-fw fa-arrows-v"></i> Dropdown <i class="fa fa-fw fa-caret-down"></i></a>
                         <ul id="demo" class="collapse">
@@ -167,7 +168,7 @@
 
         <div id="page-wrapper">
 
-            <div class="container-fluid">
+            <div class="container-fluid" style="background-color: dimgray;">
             <%=yield%>
             </div>
             <!-- /.container-fluid -->

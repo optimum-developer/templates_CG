@@ -46,7 +46,7 @@ div.wrapper{display:block; width:100%; margin:0; padding:0; text-align:left;}
 
 /*----------------------------------------------Generalise-------------------------------------*/
 
-#header, #container, #footer{display:block; width:960px; margin:0 auto;}
+.header_c, .container_c, #footer{display:block; width:960px; margin:0 auto;}
 
 nav ul{margin:0; padding:0; list-style:none;}
 
@@ -77,72 +77,72 @@ input, textarea, select{font-size:12px; font-family:Georgia,"Times New Roman",Ti
 
 /*----------------------------------------------Header-------------------------------------*/
 
-#header{padding:20px 0;}
+.header_c{padding:20px 0;}
 
-#header #hgroup{float:left; margin:0 0 20px 0;}
-#header #hgroup h1, #header #hgroup h2{font-weight:normal; font-style:normal; text-transform:none;}
-#header #hgroup h1{font-size:36px;}
-#header #hgroup h2{font-size:13px;}
+.header_c .hgroup_c{float:left; margin:0 0 20px 0;}
+.header_c .hgroup_c h1, .header_c .hgroup_c h2{font-weight:normal; font-style:normal; text-transform:none;}
+.header_c .hgroup_c h1{font-size:36px;}
+.header_c .hgroup_c h2{font-size:13px;}
 
-#header form{display:block; width:290px; float:right; margin:20px 0; padding:0;}
-#header form input{display:block; float:left; width:200px; margin:0; padding:5px; color:#C0BAB6; background-color:#232323; border:1px solid #666666;}
-#header form #sf_submit{display:block; float:right; width:70px; font-size:12px; font-weight:bold; text-transform:uppercase; color:#FFFFFF; background-color:#FF9900; border:none; cursor:pointer;}
+.header_c form{display:block; width:290px; float:right; margin:20px 0; padding:0;}
+.header_c form input{display:block; float:left; width:200px; margin:0; padding:5px; color:#C0BAB6; background-color:#232323; border:1px solid #666666;}
+.header_c form #sf_submit{display:block; float:right; width:70px; font-size:12px; font-weight:bold; text-transform:uppercase; color:#FFFFFF; background-color:#FF9900; border:none; cursor:pointer;}
 
-#header nav{display:block; width:100%; margin:0; padding:20px 0; color:#C0BAB6; background-color:#232323; clear:both;}
-#header nav ul{padding:0 20px;}
-#header nav li{display:inline; margin-right:25px; text-transform:uppercase;}
-#header nav li.last{margin-right:0;}
-#header nav li a{color:#C0BAB6; background-color:#232323;}
-#header nav li a:hover{color:#FF9900; background-color:#232323;}
+.header_c nav{display:block; width:100%; margin:0; padding:20px 0; color:#C0BAB6; background-color:#232323; clear:both;}
+.header_c nav ul{padding:0 20px;}
+.header_c nav li{display:inline; margin-right:25px; text-transform:uppercase;}
+.header_c nav li.last{margin-right:0;}
+.header_c nav li a{color:#C0BAB6; background-color:#232323;}
+.header_c nav li a:hover{color:#FF9900; background-color:#232323;}
 
 /*----------------------------------------------Content Area-------------------------------------*/
 
-#container{padding:30px 0;}
-#container section{display:block; margin-bottom:30px; padding:0;}
-#container .last{margin:0;}
-#container .more{text-align:right;}
+.container_c{padding:30px 0;}
+.container_c section{display:block; margin-bottom:30px; padding:0;}
+.container_c .last{margin:0;}
+.container_c .more{text-align:right;}
 
 /* ------Slider-----*/
 
-#container #slider{width:100%;}
-#container #slider figure{}
-#container #slider figure img{float:right; width:630px; height:300px;}
-#container #slider figure figcaption{display:block; float:left; width:290px; height:260px; padding:20px; overflow:hidden; color:#989898; background-color:#464646; line-height:1.6em;}
-#container #slider figure figcaption a{color:#FF9900; background-color:#464646;}
-#container #slider figure h2{font-size:42px; font-weight:normal; font-style:italic; text-transform:none;}
-#container #slider figure footer{}
+.container_c .slider_c{width:100%;}
+.container_c .slider_c figure{}
+.container_c .slider_c figure img{float:right; width:630px; height:300px;}
+.container_c .slider_c figure figcaption{display:block; float:left; width:290px; height:260px; padding:20px; overflow:hidden; color:#989898; background-color:#464646; line-height:1.6em;}
+.container_c .slider_c figure figcaption a{color:#FF9900; background-color:#464646;}
+.container_c .slider_c figure h2{font-size:42px; font-weight:normal; font-style:italic; text-transform:none;}
+.container_c .slider_c figure footer{}
 
 /* ------Main Content-----*/
 
-#container #intro{width:100%; margin-bottom:60px; padding-bottom:20px; border-bottom:1px solid #D6D6D6;}
-#container #intro section{width:100%;}
-#container #intro section article{}
-#container #intro section article h2{margin-bottom:15px;}
-#container #intro section article p{}
-#container #intro section article figure ul{display:block; width:100%; margin:0; padding:0; list-style:none;}
-#container #intro section article figure ul li{display:inline-block; float:left; margin:0 25px 0 0;}
-#container #intro section article figure ul li.last{margin:0;}
-#container #intro section article figure ul li img{width:130px; height:130px; margin:0; padding:4px; border:1px solid #D6D6D6;}
-#container #intro section article figure figcaption{display:block; width:100%; margin-top:20px; clear:both; text-align:center; text-transform:uppercase; font-weight:bold;}
+.container_c .intro_c{width:100%; margin-bottom:60px; padding-bottom:20px; border-bottom:1px solid #D6D6D6;}
+.container_c .intro_c section{width:100%;}
+.container_c .intro_c section article{}
+.container_c .intro_c section article h2{margin-bottom:15px;}
+.container_c .intro_c section article p{}
+.container_c .intro_c section article figure ul{display:block; width:100%; margin:0; padding:0; list-style:none;}
+.container_c .intro_c section article figure ul li{display:inline-block; float:left; margin:0 25px 0 0;}
+.container_c .intro_c section article figure ul li.last{margin:0;}
+.container_c .intro_c section article figure ul li img{width:130px; height:130px; margin:0; padding:4px; border:1px solid #D6D6D6;}
+.container_c .intro_c section article figure figcaption{display:block; width:100%; margin-top:20px; clear:both; text-align:center; text-transform:uppercase; font-weight:bold;}
 
-#container #homepage{display:block; width:100%; line-height:1.6em;}
-#container #homepage section{margin-bottom:0;}
-#container #homepage section h2.title{margin:0 0 25px 0; padding:0 0 8px 0; font-size:16px; font-weight:bold; text-transform:uppercase;}
-#container #homepage section footer{clear:both;}
+.container_c .homepage_c{display:block; width:100%; line-height:1.6em;}
+.container_c .homepage_c section{margin-bottom:0;}
+.container_c .homepage_c section h2.title{margin:0 0 25px 0; padding:0 0 8px 0; font-size:16px; font-weight:bold; text-transform:uppercase;}
+.container_c .homepage_c section footer{clear:both;}
 
 /* ------Blogposts-----*/
 
-#container #homepage section article header h2{font-size:13px; font-weight:bold;}
-#container #homepage section article address, #container #homepage section article time{font-size:10px; font-style:normal;}
-#container #homepage section article footer{text-align:left;}
+.container_c .homepage_c section article header h2{font-size:13px; font-weight:bold;}
+.container_c .homepage_c section article address, .container_c .homepage_c section article time{font-size:10px; font-style:normal;}
+.container_c .homepage_c section article footer{text-align:left;}
 
 /* ------Quick Links-----*/
 
-#container #homepage section nav li{margin:0 0 8px 0; padding:0 0 5px 0; border-bottom:1px solid #D6D6D6;}
-#container #homepage section nav li.last{margin:0;}
-#container #homepage section nav a{padding:0 0 0 10px; background:url("../arrow.gif") left center no-repeat;}
+.container_c .homepage_c section nav li{margin:0 0 8px 0; padding:0 0 5px 0; border-bottom:1px solid #D6D6D6;}
+.container_c .homepage_c section nav li.last{margin:0;}
+.container_c .homepage_c section nav a{padding:0 0 0 10px; background:url("../arrow.gif") left center no-repeat;}
 
 /*----------------------------------------------Footer-------------------------------------*/
 
-#footer{padding:20px 0;}
-#footer p{margin:0; padding:0;}
+.footer_c{padding:20px 0;}
+.footer_c p{margin:0; padding:0;}

@@ -46,7 +46,7 @@ div.wrapper{display:block; width:100%; margin:0; padding:0; text-align:left;}
 
 /*----------------------------------------------Generalise-------------------------------------*/
 
-#header, #container, #footer{display:block; width:960px; margin:0 auto;}
+.header_c, #container, #footer{display:block; width:960px; margin:0 auto;}
 
 nav ul{margin:0; padding:0; list-style:none;}
 
@@ -77,23 +77,23 @@ input, textarea, select{font-size:12px; font-family:Georgia,"Times New Roman",Ti
 
 /*----------------------------------------------Header-------------------------------------*/
 
-#header{padding:20px 0;}
+.header_c{padding:20px 0;}
 
-#header #hgroup{float:left; margin:0 0 20px 0;}
-#header #hgroup h1, #header #hgroup h2{font-weight:normal; font-style:normal; text-transform:none;}
-#header #hgroup h1{font-size:36px;}
-#header #hgroup h2{font-size:13px;}
+.header_c #hgroup{float:left; margin:0 0 20px 0;}
+.header_c #hgroup h1, .header_c #hgroup h2{font-weight:normal; font-style:normal; text-transform:none;}
+.header_c #hgroup h1{font-size:36px;}
+.header_c #hgroup h2{font-size:13px;}
 
-#header form{display:block; width:290px; float:right; margin:20px 0; padding:0;}
-#header form input{display:block; float:left; width:200px; margin:0; padding:5px; color:#C0BAB6; background-color:#232323; border:1px solid #666666;}
-#header form #sf_submit{display:block; float:right; width:70px; font-size:12px; font-weight:bold; text-transform:uppercase; color:#FFFFFF; background-color:#FF9900; border:none; cursor:pointer;}
+.header_c form{display:block; width:290px; float:right; margin:20px 0; padding:0;}
+.header_c form input{display:block; float:left; width:200px; margin:0; padding:5px; color:#C0BAB6; background-color:#232323; border:1px solid #666666;}
+.header_c form #sf_submit{display:block; float:right; width:70px; font-size:12px; font-weight:bold; text-transform:uppercase; color:#FFFFFF; background-color:#FF9900; border:none; cursor:pointer;}
 
-#header nav{display:block; width:100%; margin:0; padding:20px 0; color:#C0BAB6; background-color:#232323; clear:both;}
-#header nav ul{padding:0 20px;}
-#header nav li{display:inline; margin-right:25px; text-transform:uppercase;}
-#header nav li.last{margin-right:0;}
-#header nav li a{color:#C0BAB6; background-color:#232323;}
-#header nav li a:hover{color:#FF9900; background-color:#232323;}
+.header_c nav{display:block; width:100%; margin:0; padding:20px 0; color:#C0BAB6; background-color:#232323; clear:both;}
+.header_c nav ul{padding:0 20px;}
+.header_c nav li{display:inline; margin-right:25px; text-transform:uppercase;}
+.header_c nav li.last{margin-right:0;}
+.header_c nav li a{color:#C0BAB6; background-color:#232323;}
+.header_c nav li a:hover{color:#FF9900; background-color:#232323;}
 
 /*----------------------------------------------Content Area-------------------------------------*/
 

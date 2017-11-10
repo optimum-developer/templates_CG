@@ -2,6 +2,10 @@
 
 one:
   template_id: 1
+  website_name: MyString
+  category: MyString
 
 two:
   template_id: 1
+  website_name: MyString
+  category: MyString
